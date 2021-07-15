@@ -58,6 +58,7 @@ body{
 .todotext{
     padding: 10px 15px;
     background-color: white;
+    width: 255px;
 }
 .check{
     border: none;
@@ -82,4 +83,7 @@ body{
 .trash:hover{
     color: white;
     background-color: #d88771;
+}
+.fa-trash, .fa-check{
+    pointer-events: none;
 }

@@ -1,14 +1,17 @@
 
 let toDoUl = document.querySelector(".todocontainer");
-
 let textBox = document.querySelector(".createinput");
+let trashBtn = document.getElementById("trashbtn");
+let listDiv = document.querySelector(".todowrapper");
 
 createbtn.addEventListener("click",createToDo);
+toDoUl.addEventListener("click",deleteItem);
 
-function createToDo(){
+function createToDo(event){
 
     let toDoDiv = document.createElement("div");
     toDoDiv.className = "todowrapper";
+    toDoDiv.id ="todowrapper";
 
     let createToDoLi = document.createElement("li");
     createToDoLi.className ="todotext";
@@ -20,6 +23,7 @@ function createToDo(){
 
     let createTrashBtn = document.createElement('button');
     createTrashBtn.className ="trash";
+    createTrashBtn.id="trashBtn";
     createTrashBtn.innerHTML = '<i class="fas fa-trash"></i>';
 
     toDoUl.appendChild(toDoDiv);
@@ -29,3 +33,12 @@ function createToDo(){
 
     textBox.value ="";
 };
+
+function deleteItem(e){
+    const item = e.target;
+    if(item.className==='trash'){
+        const todo = item.parentElement;
+        todo.remove();
+    }
+};
+
