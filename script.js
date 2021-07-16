@@ -39,6 +39,11 @@ function deleteItem(e){
     if(item.className==='trash'){
         const todo = item.parentElement;
         todo.remove();
-    }
+    };
+    if(item.className==='check'){
+        const todo = item.parentElement;
+        const toDoText = document.querySelector(".todotext");
+        todo.className="completed";
+    };
 };
 
