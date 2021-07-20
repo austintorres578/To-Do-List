@@ -53,6 +53,7 @@ body{
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    transition: all 1s ease;
 }
 .todotext{
     padding: 10px 15px;

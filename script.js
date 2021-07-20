@@ -42,7 +42,6 @@ function deleteItem(e){
     };
     if(item.className==='check'){
         const todo = item.parentElement;
-        const toDoText = document.querySelector(".todotext");
         todo.className="completed";
     };
 };
