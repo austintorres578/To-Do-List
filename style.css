@@ -1,101 +1,538 @@
-* {
+*{
     margin: 0px;
     padding: 0px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-body{
-    background-image: linear-gradient(120deg, #e2c35d, #d88771);
-    height: 100vh;
+    background-color: white;
 }
 
-.todo-list-header-container{
+.planner-header{
+    padding-top: 25px;
+}
+.planner-header p{
+    font-size: 55px;
+    font-family:'festive',cursive;
     text-align: center;
-    padding-top: 25vh;
 }
-.todo-list-header-container h1{
-    color: white;
+.schedule-header{
+    text-align: center;
+    font-size: 20px;
+    margin-right: 10px;
 }
-
-.todo-input-container{
-    display: flex;
-    justify-content: center;
+.todo-header{
+    text-align: center;
+    font-size: 20px;
 }
-
-.todo-input-container input{
-    margin-top: 50px;
-    padding: 10px 15px;
+.monday-schedule{
+    background-color: rgb(160, 160, 160);
+    text-align: left;
+    height: 125px;
+    margin-bottom: 10px;
 }
-.todo-input-container button{
-    border: none;
-    cursor: pointer;
-    margin-top: 50px;
-    padding: 10px 15px;
-    transition: .5s;
-    color: white;
-    background-color: #d88771;
-}
-.todo-input-container button:hover{
-    color: #d88771;
-    background-color: white;
-}
-.todo-input-container input{
-    width: 300px;
-    border: none;
+.monday-schedule p{
+    background-color: rgb(160, 160, 160);
+    padding-left: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
 
-.todoitems{
-    margin-top: 30px;
+.tuesday-schedule{
+    background-color: rgb(170, 170, 170);
+    text-align: left;
+    height: 125px;
+    margin-bottom: 10px;
 }
-.todocontainer{
-    list-style: none;
+.tuesday-schedule p{
+    background-color: rgb(170, 170, 170);
+    padding-left: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
 }
-.todowrapper{
+
+.wednesday-schedule{
+    background-color: rgb(180, 180, 180);
+    text-align: left;
+    height: 125px;
+    margin-bottom: 10px;
+}
+.wednesday-schedule p{
+    background-color: rgb(180, 180, 180);
+    padding-left: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.thursday-schedule{
+    background-color: rgb(190, 190, 190);
+    text-align: left;
+    height: 125px;
+    margin-bottom: 10px;
+}
+.thursday-schedule p{
+    background-color: rgb(190, 190, 190);
+    padding-left: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.friday-schedule{
+    background-color: rgb(200, 200, 200);
+    text-align: left;
+    height: 125px;
+    margin-bottom: 10px;
+}
+.friday-schedule p{
+    background-color: rgb(200, 200, 200);
+    padding-left: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.saturday-schedule{
+    background-color: rgb(210, 210, 210);
+    text-align: left;
+    height: 125px;
+    margin-bottom: 10px;
+}
+.saturday-schedule p{
+    background-color: rgb(210, 210, 210);
+    padding-left: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.sunday-schedule{
+    background-color: rgb(220, 220, 220);
+    text-align: left;
+    height: 125px;
+    margin-bottom: 10px;
+}
+.sunday-schedule p{
+    background-color: rgb(220, 220, 220);
+    padding-left: 5px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.mon-empty-day-input{
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-    transition: all 1s ease;
 }
-.todotext{
-    padding: 10px 15px;
-    background-color: white;
-    width: 255px;
+.mon-empty-day-input textarea{
+    background-color: rgb(160, 160, 160);
+    border: solid rgb(160, 160, 160);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
 }
-.check{
+.mon-empty-day-input button{
+    background-color: lightgray;
     border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    background-color: green;
-    color: white;
-    transition: .5s;
+    width: 10%;
 }
-.trash{
-    border: none;
-    padding: 10px 15px;
-    background-color: red;
-    color: white;
-    transition: .5s;
-    cursor: pointer;
+.mon-empty-day-input button i{
+    background-color: lightgray;
 }
-.check:hover{
-    color: white;
-    background-color: #d88771;
-}
-.trash:hover{
-    color: white;
-    background-color: #d88771;
-}
-.fa-trash, .fa-check{
-    pointer-events: none;
-}
-.completed{
-    opacity: .5;
+
+.tues-empty-day-input{
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
 }
-.completed li{
-    text-decoration: line-through;
-    padding: 10px 15px;
-    background-color: white;
-    width: 255px;
+.tues-empty-day-input textarea{
+    background-color: rgb(170, 170, 170);
+    border: solid rgb(170, 170, 170);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+.tues-empty-day-input button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.tues-empty-day-input button i{
+    background-color: lightgray;
+}
+.wed-empty-day-input{
+    display: flex;
+}
+.wed-empty-day-input textarea{
+    background-color: rgb(180, 180, 180);
+    border: solid rgb(180, 180, 180);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+.wed-empty-day-input button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.wed-empty-day-input button i{
+    background-color: lightgray;
+}
+.thurs-empty-day-input{
+    display: flex;
+}
+.thurs-empty-day-input textarea{
+    background-color: rgb(190, 190, 190);
+    border: solid rgb(190, 190, 190);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+.thurs-empty-day-input button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.thurs-empty-day-input button i{
+    background-color: lightgray;
+}
+.fri-empty-day-input{
+    display: flex;
+}
+.fri-empty-day-input textarea{
+    background-color: rgb(200, 200, 200);
+    border: solid rgb(200, 200, 200);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+.fri-empty-day-input button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.fri-empty-day-input button i{
+    background-color: lightgray;
+}
+.sat-empty-day-input{
+    display: flex;
+}
+.sat-empty-day-input textarea{
+    background-color: rgb(210, 210, 210);
+    border: solid rgb(210, 210, 210);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+.sat-empty-day-input button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.sat-empty-day-input button i{
+    background-color: lightgray;
+}
+.sun-empty-day-input{
+    display: flex;
+}
+.sun-empty-day-input textarea{
+    background-color: rgb(220, 220, 220);
+    border: solid rgb(220, 220, 220);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+.sun-empty-day-input button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.sun-empty-day-input button i{
+    background-color: lightgray;
+}
+.mon-filled-day{
+    display: none;
+}
+.mon-filled-day textarea{
+    background-color: rgb(160, 160, 160);
+    border: solid rgb(160, 160, 160);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+
+.mon-filled-day button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.mon-filled-day button i{
+    background-color: lightgray;
+}
+.tues-filled-day{
+    display: none;
+}
+.tues-filled-day textarea{
+    background-color: rgb(170, 170, 170);
+    border: solid rgb(170, 170, 170);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+
+.tues-filled-day button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.tues-filled-day button i{
+    background-color: lightgray;
+}
+.wed-filled-day{
+    display: none;
+}
+.wed-filled-day textarea{
+    background-color: rgb(180, 180, 180);
+    border: solid rgb(180, 180, 180);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+
+.wed-filled-day button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.wed-filled-day button i{
+    background-color: lightgray;
+}
+.thurs-filled-day{
+    display: none;
+}
+.thurs-filled-day textarea{
+    background-color: rgb(190, 190, 190);
+    border: solid rgb(190, 190, 190);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+
+.thurs-filled-day button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.thurs-filled-day button i{
+    background-color: lightgray;
+}
+.fri-filled-day{
+    display: none;
+}
+.fri-filled-day textarea{
+    background-color: rgb(200, 200, 200);
+    border: solid rgb(200, 200, 200);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+
+.fri-filled-day button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.fri-filled-day button i{
+    background-color: lightgray;
+}
+.sat-filled-day{
+    display: none;
+}
+.sat-filled-day textarea{
+    background-color: rgb(210, 210, 210);
+    border: solid rgb(210, 210, 210);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+
+.sat-filled-day button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.sat-filled-day button i{
+    background-color: lightgray;
+}
+.sun-filled-day{
+    display: none;
+}
+.sun-filled-day textarea{
+    background-color: rgb(220, 220, 220);
+    border: solid rgb(220, 220, 220);
+    outline: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    resize: none;
+    width: 90%;
+    height: 95px;
+}
+
+.sun-filled-day button{
+    background-color: lightgray;
+    border: none;
+    width: 10%;
+}
+.sun-filled-day button i{
+    background-color: lightgray;
+}
+.todo-list{
+    height: 250px;
+    text-align: left;
+}
+.todo-list ul{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+}
+.todo-list ul li{
+    border-bottom: solid gray;
+    width: 100%;
+}
+
+.grateful-header{
+    text-align: center;
+    margin-top: 15px;
+    font-size: 20px;
+}
+.grateful-list{
+    line-height: 2.5;
+    height: 230px;
+    margin-bottom: 0px;
+}
+.grateful-list ol{
+    padding-left: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.grateful-list ol li{
+    border-bottom: solid gray;
+    width: 100%;
+}
+
+.notes-header{
+    text-align: center;
+    font-size: 20px;
+}
+.notes-box{
+    height: 300px;
+    text-align: center;
+}
+.notes-box textarea{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    resize: none;
+}
+.notes-write-btn{
+    width: 80%;
+    height: 35px;
+    background-color: lightgray;
+    border: none;
+}
+.notes-write-btn i{
+    background-color: lightgray;
+}
+.notes-trash-btn{
+    width: 80%;
+    height: 35px;
+    background-color: lightgray;
+    border: none;
+}
+.notes-trash-btn i{
+    background-color: lightgray;
+}
+.filled-notes-box{
+    display: none;
+    height: 300px;
+    text-align: center;
+}
+.filled-notes-box textarea{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    resize: none;
+}
+.empty-line{
+    display: flex;
+}
+.empty-line input{
+    border: none;
+    width: 100%;
+    outline: none;
+}
+.empty-line button{
+    border: none;
+    background-color: lightgray;
+    width: 10%;
+}
+.empty-line button i{
+    background-color: lightgray;
+}
+.filled-line{
+    display: none;
+}
+.filled-line p{
+    width: 90%;
+    margin-bottom: 0px;
+}
+.filled-line button{
+    width: 10%;
+    border: none;
+    background-color: lightgray;
+}
+.filled-line button i{
+    background-color: lightgray;
+    width: 100%;
 }

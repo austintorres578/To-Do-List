@@ -4,24 +4,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Planner</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Festive&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <title>To-Do List</title>
 </head>
 <body>
-    <div class="todo-list-header-container">
-        <h1>Austin's To-Do List</h1>
-    </div>
-    <div class="todo-input-container">
-        <input class="createinput" type="text" name="" id="">
-        <button id="createbtn"><i class="fas fa-plus-circle"></i></button>
-    </div>
-    <div class="todoitems">
-        <ul class="todocontainer">
-            
-        </ul>
-    </div>
-    <script src="script.js"></script>
+    <div class="container-fluid" style="padding: 0px 10% 0px 10%;">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="planner-header">
+                    <p>Weekly Planner</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="schedule-header">
+                    <p>SCHEDULE AND EVENTS</p>
+                    <div class="monday-schedule">
+                        <p>Monday:</p>
+                        <div class="mon-empty-day-input">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130"></textarea>
+                            <button><i class="fas fa-pen"></i></button>
+                        </div>
+                        <div class="mon-filled-day">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130" readonly></textarea>
+                            <button><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>
+                    <div class="tuesday-schedule">
+                        <p>Tuesday:</p>
+                        <div class="tues-empty-day-input">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130"></textarea>
+                            <button><i class="fas fa-pen"></i></button>
+                        </div>
+                        <div class="tues-filled-day">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130" readonly></textarea>
+                            <button><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>    
+                    <div class="wednesday-schedule">
+                        <p>Wednesday:</p>
+                        <div class="wed-empty-day-input">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130"></textarea>
+                            <button><i class="fas fa-pen"></i></button>
+                        </div>
+                        <div class="wed-filled-day">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130" readonly></textarea>
+                            <button><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>         
+                    <div class="thursday-schedule">
+                        <p>Thursday:</p>
+                        <div class="thurs-empty-day-input">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130"></textarea>
+                            <button><i class="fas fa-pen"></i></button>
+                        </div>
+                        <div class="thurs-filled-day">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130" readonly></textarea>
+                            <button><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>    
+                    <div class="friday-schedule">
+                        <p>Friday:</p>
+                        <div class="fri-empty-day-input">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130"></textarea>
+                            <button><i class="fas fa-pen"></i></button>
+                        </div>
+                        <div class="fri-filled-day">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130" readonly></textarea>
+                            <button><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>      
+                    <div class="saturday-schedule">
+                        <p>Saturday:</p>
+                        <div class="sat-empty-day-input">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130"></textarea>
+                            <button><i class="fas fa-pen"></i></button>
+                        </div>
+                        <div class="sat-filled-day">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130" readonly></textarea>
+                            <button><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>      
+                    <div class="sunday-schedule">
+                        <p>Sunday:</p>
+                        <div class="sun-empty-day-input">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130"></textarea>
+                            <button><i class="fas fa-pen"></i></button>
+                        </div>
+                        <div class="sun-filled-day">
+                            <textarea name="" id="" cols="30" rows="10" maxlength="130" readonly></textarea>
+                            <button><i class="fas fa-check"></i></button>
+                        </div>
+                    </div>           
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="todo-header">
+                    <p>TO DO LIST</p>
+                <div class="todo-list">
+                    <ul>
+                        <li><div class="empty-line"><input id="emptyInput1" type="text" name="" id="" maxlength="41"><button id="write-button1" style="display: none;"><i class="fas fa-pen"></i></button></div><div class="filled-line" id="filled-line1"><p id="filled-text1"></p><button id="check-button1"><i class="fas fa-check"></i></button></div></li>
+                        <li><div class="empty-line"><input id="emptyInput2" type="text" name="" id="" maxlength="41"><button id="write-button2" style="display: none;"><i class="fas fa-pen"></i></button></div><div class="filled-line" id="filled-line2"><p id="filled-text2"></p><button id="check-button2"><i class="fas fa-check"></i></button></div></li>
+                        <li><div class="empty-line"><input id="emptyInput3" type="text" name="" id="" maxlength="41"><button id="write-button3" style="display: none;"><i class="fas fa-pen"></i></button></div><div class="filled-line" id="filled-line3"><p id="filled-text3"></p><button id="check-button3"><i class="fas fa-check"></i></button></div></li>
+                        <li><div class="empty-line"><input id="emptyInput4" type="text" name="" id="" maxlength="41"><button id="write-button4" style="display: none;"><i class="fas fa-pen"></i></button></div><div class="filled-line" id="filled-line4"><p id="filled-text4"></p><button id="check-button4"><i class="fas fa-check"></i></button></div></li>
+                        <li><div class="empty-line"><input id="emptyInput5" type="text" name="" id="" maxlength="41"><button id="write-button5" style="display: none;"><i class="fas fa-pen"></i></button></div><div class="filled-line" id="filled-line5"><p id="filled-text5"></p><button id="check-button5"><i class="fas fa-check"></i></button></div></li>
+                        <li><div class="empty-line"><input id="emptyInput6" type="text" name="" id="" maxlength="41"><button id="write-button6" style="display: none;"><i class="fas fa-pen"></i></button></div><div class="filled-line" id="filled-line6"><p id="filled-text6"></p><button id="check-button6"><i class="fas fa-check"></i></button></div></li>
+                        <li><div class="empty-line"><input id="emptyInput7" type="text" name="" id="" maxlength="41"><button id="write-button7" style="display: none;"><i class="fas fa-pen"></i></button></div><div class="filled-line" id="filled-line7"><p id="filled-text7"></p><button id="check-button7"><i class="fas fa-check"></i></button></div></li>
+                    </ul>
+                </div>
+                </div>
+                <div class="grateful-header">
+                    <p>5 THINGS I'M GRATEFUL FOR</p>
+                </div>
+                <div class="grateful-list">
+                    <ol>
+                        <li><div class="empty-line"><input id="gratefulEmptyInput1" type="text" name="" id="" maxlength="52"><button id="grateful-write-button1" style="display: none;"><i class="fas fa-pen"></i></button></div><div class="filled-line" id="grateful-filled-line1"><p id="grateful-filled-text1"></p><button id="grateful-check-button1"><i class="fas fa-check"></i></button></div></li>
+                        <li><div class="empty-line"><input id="gratefulEmptyInput2" type="text" name="" id="" maxlength="52"><button id="grateful-write-button2" style="display: none;"><i class="fas fa-pen"></i></button></div><div class="filled-line" id="grateful-filled-line2"><p id="grateful-filled-text2"></p><button id="grateful-check-button2"><i class="fas fa-check"></i></button></div></li>
+                        <li><div class="empty-line"><input id="gratefulEmptyInput3" type="text" name="" id="" maxlength="52"><button id="grateful-write-button3" style="display: none;"><i class="fas fa-pen"></i></button></div><div class="filled-line" id="grateful-filled-line3"><p id="grateful-filled-text3"></p><button id="grateful-check-button3"><i class="fas fa-check"></i></button></div></li>
+                        <li><div class="empty-line"><input id="gratefulEmptyInput4" type="text" name="" id="" maxlength="52"><button id="grateful-write-button4" style="display: none;"><i class="fas fa-pen"></i></button></div><div class="filled-line" id="grateful-filled-line4"><p id="grateful-filled-text4"></p><button id="grateful-check-button4"><i class="fas fa-check"></i></button></div></li>
+                        <li><div class="empty-line"><input id="gratefulEmptyInput5" type="text" name="" id="" maxlength="52"><button id="grateful-write-button5" style="display: none;"><i class="fas fa-pen"></i></button></div><div class="filled-line" id="grateful-filled-line5"><p id="grateful-filled-text5"></p><button id="grateful-check-button5"><i class="fas fa-check"></i></button></div></li>
+                    </ol>
+                </div>
+                <div class="notes-header">
+                    <p>NOTES</p>
+                </div>
+                <div class="notes-box">
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <button class="notes-write-btn"><i class="fas fa-pen"></i></button>
+                </div>
+                <div class="filled-notes-box">
+                    <textarea name="" id="" cols="30" rows="10" readonly></textarea>
+                    <button class="notes-trash-btn"><i class="fas fa-trash"></i></button>
+                </div>
+            </div>
+        </div>
+     </div>
+     <script src="script.js"></script>
 </body>
 </html>
