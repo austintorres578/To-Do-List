@@ -289,12 +289,8 @@
 }
 
 .mon-filled-day button{
-    background-color: lightgray;
     border: none;
     width: 10%;
-}
-.mon-filled-day button i{
-    background-color: lightgray;
 }
 .tues-filled-day{
     display: none;
@@ -312,12 +308,8 @@
 }
 
 .tues-filled-day button{
-    background-color: lightgray;
     border: none;
     width: 10%;
-}
-.tues-filled-day button i{
-    background-color: lightgray;
 }
 .wed-filled-day{
     display: none;
@@ -335,13 +327,10 @@
 }
 
 .wed-filled-day button{
-    background-color: lightgray;
     border: none;
     width: 10%;
 }
-.wed-filled-day button i{
-    background-color: lightgray;
-}
+
 .thurs-filled-day{
     display: none;
 }
@@ -358,12 +347,8 @@
 }
 
 .thurs-filled-day button{
-    background-color: lightgray;
     border: none;
     width: 10%;
-}
-.thurs-filled-day button i{
-    background-color: lightgray;
 }
 .fri-filled-day{
     display: none;
@@ -381,13 +366,10 @@
 }
 
 .fri-filled-day button{
-    background-color: lightgray;
     border: none;
     width: 10%;
 }
-.fri-filled-day button i{
-    background-color: lightgray;
-}
+
 .sat-filled-day{
     display: none;
 }
@@ -404,13 +386,10 @@
 }
 
 .sat-filled-day button{
-    background-color: lightgray;
     border: none;
     width: 10%;
 }
-.sat-filled-day button i{
-    background-color: lightgray;
-}
+
 .sun-filled-day{
     display: none;
 }
@@ -427,13 +406,10 @@
 }
 
 .sun-filled-day button{
-    background-color: lightgray;
     border: none;
     width: 10%;
 }
-.sun-filled-day button i{
-    background-color: lightgray;
-}
+
 .todo-list{
     height: 250px;
     text-align: left;
@@ -537,9 +513,19 @@
 .filled-line button{
     width: 10%;
     border: none;
-    background-color: lightgray;
 }
 .filled-line button i{
-    background-color: lightgray;
     width: 100%;
+}
+.check-btn{
+    background-color: darkgray;
+}
+.check-btn i{
+    background-color: darkgray;
+}
+.edit-btn{
+    background-color: lightgray;
+}
+.edit-btn i{
+    background-color: lightgray;
 }
